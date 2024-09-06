@@ -7112,11 +7112,6 @@ bal_single_line.patient = subset(
   !duplicated(bal_single_line$patient)
 )
 
-#Recode race/ethnicity
-bal_single_line.patient$Race[bal_single_line.patient$Race == "Asian Indian"] = "Asian"
-bal_single_line.patient$Race[bal_single_line.patient$Race == "Native Hawaiian or Other Pacific Islander"] = "Asian"
-bal_single_line.patient$Race[bal_single_line.patient$Race == "American Indian or Alaska Native"] = "Unknown or Not Reported"
-
 #Fix Gender
 bal_single_line.patient$Gender[bal_single_line.patient$Gender == "Female"] = FALSE
 bal_single_line.patient$Gender[bal_single_line.patient$Gender == "Male"] = TRUE
